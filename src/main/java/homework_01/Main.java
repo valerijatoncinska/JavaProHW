@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) {
 
         // работа с одним потоком
-        for (int i = 0; i < 2_000_000; i++){
+        for (int i = 1; i <= 2_000_000; i++){
             if (isDivisibleBy21(i) && doesContainNumberThree(i)) {
                 counterOneStream++;
             }
@@ -19,7 +19,7 @@ public class Main {
 
         // создание и работа с двумя потоками
         MyThread myThread01 = new MyThread();
-        MyThread myThread02 = new MyThread();
+        MyThread2 myThread02 = new MyThread2();
 
         myThread01.start();
         myThread02.start();
